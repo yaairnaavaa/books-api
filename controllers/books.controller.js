@@ -44,7 +44,7 @@ exports.getBookById = async (req, res) => {
 // Crear libro
 exports.newBook = async (req, res) => {
     try {
-        const { titulo, autor, isbn, genero, precio, stock } = req.body;
+        const { titulo, autor, isbn, genero, precio, stock, img } = req.body;
         const newBook = new Book({ titulo, autor, isbn, genero, precio, stock, img });
         await newBook.save();
 
