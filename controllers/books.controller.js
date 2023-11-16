@@ -45,7 +45,7 @@ exports.getBookById = async (req, res) => {
 exports.newBook = async (req, res) => {
     try {
         const { titulo, autor, isbn, genero, precio, stock } = req.body;
-        const newBook = new Book({ titulo, autor, isbn, genero, precio, stock });
+        const newBook = new Book({ titulo, autor, isbn, genero, precio, stock, img });
         await newBook.save();
 
         return res.status(200).json(
