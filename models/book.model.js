@@ -6,7 +6,8 @@ let bookSchema = new mongoose.Schema({
     isbn: {type: String},
     genero: {type: String},
     precio: {type: Number},
-    stock: {type: Number}
+    stock: {type: Number},
+    img: {type: String},
 });
 
 module.exports = mongoose.model('Book', bookSchema, 'book');
